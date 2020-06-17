@@ -8,7 +8,4 @@ func main() {
 		sum++
 		fmt.Println(sum)
 	}
-
-	a := ""
-	fmt.Println(a)
 }

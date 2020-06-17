@@ -1,9 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
-	fmt.Println("Wo shi zhongguoren !")
-	fmt.Println("Wo shi zhongguoren !")
-	fmt.Println("Wo shi zhotourjngguoren !")
+	var i int
+	var j float32
+	var k bool
+	fmt.Println(i, j, k)
+	time.Sleep(time.Second * 2)
+	fmt.Println("wo le ge qu")
+	time.Sleep(time.Second * 2)
+	fmt.Println("wo le ge qu")
+	time.Sleep(time.Second * 2)
+	fmt.Println("wo le ge qu")
 }
