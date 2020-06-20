@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func sayHello() {
+	fmt.Println("Subprocess: Hi world!~~~~~")
+	return 1000
+}
+
+func main() {
+	fmt.Println("Main process!!!")
+	go ret := sayHello()
+	fmt.Println(ret)
+	time.Sleep(1000 * time.Millisecond)
+}
