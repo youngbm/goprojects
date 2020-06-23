@@ -17,6 +17,10 @@ func main() {
 		SeekCurrent = 2
 	)
 
-	var x Type = value
-
+	type point struct {
+		x int
+		y int
+	}
+	p := new(point)
+	fmt.Println(*p)
 }
