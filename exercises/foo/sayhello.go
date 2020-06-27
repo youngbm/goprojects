@@ -8,7 +8,7 @@ import "fmt"
 
 func init() {
 	fmt.Println("I am init!!!")
-
+	fmt.Println("I am in file  SayHello.go !")
 }
 
 func SayHello() {
