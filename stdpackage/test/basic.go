@@ -1,7 +1,9 @@
-package main
+package mystrings
 
-import "fmt"
+import (
+	"strings"
+)
 
-func main() {
-	fmt.Println("--test-module-start--")
+func UpperCase(s string) string {
+	return strings.ToUpper(s)
 }
