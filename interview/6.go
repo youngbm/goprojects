@@ -14,7 +14,7 @@ func main() {
 
 	var p *name
 	p = &name{name: "xzy"} // & 对刚刚声明的结构取地址
-	//  *p 这个不能赋值
+	//  *p 这个不能赋值, 为空指针
 	//*p = name{name: "xzy"} // panic: runtime error: invalid memory address or nil pointer dereference
 
 	fmt.Println(p.name)

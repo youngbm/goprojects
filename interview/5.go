@@ -6,12 +6,11 @@ import (
 
 type abc struct {
 	test int
-	//arr  []int  // 不可以比较的类型   map, slice 和 function
+	//arr  []int  // 不可以比较的类型: map, slice 和 function, 包含都不行
 	//myfunc func() int
 }
 
 func main() {
-
 	sn1 := struct {
 		age  int
 		name string

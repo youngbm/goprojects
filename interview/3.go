@@ -15,6 +15,7 @@ func main() {
 	fmt.Println(s)                                  // [0-10]
 
 	fmt.Println()
+	// Next
 	s = make([]int, 0)
 	fmt.Printf("len: %d cap:%d \n", len(s), cap(s)) // 0, 0
 
@@ -22,7 +23,7 @@ func main() {
 	fmt.Printf("len: %d cap:%d \n", len(s), cap(s)) // 当len增长,先填满容量，再根据自身操作系统提供的算法增加
 	fmt.Println(s)
 
-	//
+	// Next
 	sum, err := funcMui(1, 2)
 	if err != nil {
 		log.Fatalln(err)

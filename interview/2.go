@@ -10,9 +10,6 @@ func main() {
 
 	s := []int{0, 1, 2, 3, 4}
 	m := make(map[int]*int) //  value为int指针
-	var z int
-	fmt.Println(&z)
-	fmt.Println(z)
 	fmt.Println("---------------------")
 
 	for k, z := range s {
@@ -20,7 +17,7 @@ func main() {
 		fmt.Println(z)
 		//  m[k] 存的是z的变量地址，最后变量地址指向数组的最后一个;
 		//  所以打印出来value都是值为切片最后一位的地址
-		m[k] = &*&z
+		m[k] = &*&z //  对副本进行赋值而已
 		// 正确写法, 申请另外一个新的变量地址,进行赋值
 		temp := z
 		m[k] = &temp
