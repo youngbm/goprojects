@@ -6,7 +6,7 @@ func rt1() (int, int) {
 	return 1, 2
 }
 
-func increaseA() int {
+func increaseA() int { //  返回变量
 	var i int
 	defer func() {
 		i++
@@ -14,7 +14,7 @@ func increaseA() int {
 	return i
 }
 
-func increaseB() (r int) {
+func increaseB() (r int) { //  返回有变量
 	defer func() {
 		r++
 	}()
@@ -43,11 +43,11 @@ func (w Work) ShowB() int {
 func main() {
 	var x0 int
 	x0, _ = rt1()
-	fmt.Println(x0)
+	fmt.Println(x0) //1
 
 	var x1 int
 	x1, y1 := rt1()
-	fmt.Println(x1, y1)
+	fmt.Println(x1, y1) // 1 2
 
 	//var x2 int
 	//x2, y2 = rt1() //y2  undefind
@@ -58,7 +58,7 @@ func main() {
 	fmt.Println(increaseA())
 	fmt.Println(increaseB())
 
-	var a A = Work{3} // 定义了接口
+	var a A = Work{3} // 定义了接口,并且实例化
 	//var a = Work{3} // 定义了结构体
 	fmt.Println(a.ShowA()) // 2 + 10
 
@@ -66,7 +66,7 @@ func main() {
 	fmt.Println(jj.ShowA())
 	fmt.Println(jj.ShowB())
 
-	var k = Work{3} // 定义了接口
+	var k = Work{3} // 定义了接收者
 	fmt.Println(k.ShowA())
 	fmt.Println(k.ShowB())
 }

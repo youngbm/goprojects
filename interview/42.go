@@ -10,7 +10,7 @@ func main() {
 	//var three int
 	//three = 3
 
-	func(unused string) {
+	func(unused string) { //  形参不用也行
 		fmt.Println("Unused!")
 	}("What ?")
 
@@ -33,7 +33,6 @@ func main() {
 
 	fmt.Println(a)
 	fmt.Println(r)
-
 }
 
 type ConfigOne struct {

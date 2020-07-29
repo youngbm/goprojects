@@ -9,14 +9,14 @@ type Person struct {
 func main() {
 	person := &Person{30}
 
-	defer fmt.Println(1, person.age)
+	defer fmt.Println(1, person.age) // 30
 
 	defer func(p *Person) { // 这里是原来的结构体被压进去了
-		fmt.Println(2, p.age)
+		fmt.Println(2, p.age) //  30
 	}(person)
 
 	defer func() {
-		fmt.Println(3, person.age)
+		fmt.Println(3, person.age) // 闭包 300
 	}()
 
 	person = &Person{300} // 这里是和上面2个不同的结构体, 只是指针变量名一样而已

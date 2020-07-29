@@ -22,14 +22,14 @@ func main() {
 		y
 		z = "zz" // 赋值
 		k        // 同上
-		p = iota // 重置，但是数值不会归0
+		p = iota // 重置为索引值，但是数值不会归0
 	)
 	fmt.Println(x, y, z, k, p)
 
 	//  Next
 	// [Important] nil 只能赋值给指针、chan、func、interface、map 或 slice 类型的变量
 
-	//var a = nil      //  错误类型
+	//var a = nil      //  错误类型 use of untyped nil
 	var a *int = nil //  改为指针可以打印
 	fmt.Println(a)
 

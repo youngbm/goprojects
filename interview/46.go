@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// 常量未使用是能编译通过的
+// 常量未使用能编译通过
 const (
 	x uint16 = 120
 	y
@@ -10,7 +10,7 @@ const (
 	z
 	a = iota // 重置为索引了  a = 4
 	b = 3333
-	c // 值紧跟前面
+	c // 值紧跟前面 值不变
 	d
 	e = iota // 重置为index
 	f
@@ -19,8 +19,9 @@ const (
 )
 
 func main() {
-	const a int = 123          //  可以去掉int也行
+	const a int = 123          // 可以去掉int也行
 	const b float64 = 123.9123 // 会覆盖全局静态变量
+	const aaaaa int = 123      // 可以去掉int也行
 	fmt.Println(a, b)
 
 	// Next

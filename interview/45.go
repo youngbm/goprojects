@@ -11,7 +11,7 @@ func main() {
 	_ = x
 
 	// Next
-	// rune 是 int32 的别名一样，byte 是 uint8 的别名
+	// rune 是int32的别名，byte是uint8的别名
 	// int32 = rune
 	// int8 = byte
 	var a byte = 0x11 // 11

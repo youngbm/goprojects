@@ -5,7 +5,7 @@ import "fmt"
 var a bool = true
 
 func main() {
-	//var x string = nil //nil 只能赋给指针类型的  arr  slice  map  chan
+	//var x string = nil //nil 只能赋给指针类型的  arr  slice  map  chan interface
 	var x string = "abc"
 	if x == "abc" {
 		x = "default"

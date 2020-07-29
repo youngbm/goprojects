@@ -17,14 +17,17 @@ func f1() {
 		recover()
 	}()
 	//defer recover() //  wrong  syntax
-	panic("f1")
+	fmt.Println("I am in f1")
 	go f2()
+	panic("f1") //  发生panic,就会去defer了,后面不执行
+	fmt.Println("I am in f1 end")
 }
 
 func f2() {
 	defer func() {
 		recover()
 	}()
+	fmt.Println("I am in f2")
 	//defer recover()  //  wrong  syntax
 	panic("f2")
 }

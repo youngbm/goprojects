@@ -5,7 +5,6 @@ import (
 	"fmt"
 )
 
-// 映射不许大写
 type People struct {
 	Name string `json: "name"`
 	//name string `json: "name"`  // 小写则不能访问

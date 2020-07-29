@@ -15,7 +15,13 @@ func (a Integer) Add(b Integer) Integer {
 func main() {
 	var a Integer = 1
 	var b Integer = 2
-	var i interface{} = &a
-	sum := i.(*Integer).Add(b) //  *Integer ->  Integer 没问题
-	fmt.Println(sum)
+
+	var j interface{} = &a
+	sum0 := j.(*Integer).Add(b) //j.(*Integer)变为和方法一样的
+	fmt.Println(sum0)
+
+	var i interface{} = a
+	sum1 := i.(Integer).Add(b) //  Integer ->  Integer 没问题
+	// i.Add()  i为接口,报错。i.(Interger)才是接收者
+	fmt.Println(sum1)
 }

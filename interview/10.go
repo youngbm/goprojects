@@ -3,13 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	a := [5]int{1, 2, 3, 4, 5}
-	t := a[3:4:4] // index 3-4 不包含4
+	a := [10]int{1, 2, 3, 4, 5, 0, 0, 0, 0, 0}
+	t := a[3:4:4] // index 3-4 不包含4  这里的4毫无意义
 	fmt.Println(t)
 	fmt.Printf("%d-%d\n", len(t), cap(t)) //截取原来的数据, 1-1
 	fmt.Println(t[0])
 
-	b := [5]int{1, 2, 3, 4, 5}
+	b := [10]int{1, 2, 3, 4, 5, 0, 0, 0, 0, 0}
 	if a == b { // [5]int和[6]int直接不能比较了, [5]int和[5]int才能比较
 		fmt.Println("Equal")
 	} else {

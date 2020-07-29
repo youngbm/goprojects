@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	m := make(map[string]int, 2) // 这里的2没啥意思
+	m := make(map[string]int, 2) // 这里 map2没啥意思
 	m["a"] = 0
 	// cap(m)  // 不能cap
 	fmt.Println(len(m))

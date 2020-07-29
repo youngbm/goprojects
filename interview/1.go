@@ -12,7 +12,7 @@ import (
 func defer_call() {
 	defer func() {
 		fmt.Println("1")
-		//recover() // 同协程的,一个panic只需要一个recover
+		recover() // 同协程的,一个panic只需要一个recover
 	}()
 	defer func() {
 		fmt.Println("2")
@@ -23,7 +23,7 @@ func defer_call() {
 		//recover()
 	}()
 
-	panic("get panic")
+	panic("get panic") // 这个最后执行， 如果有recover 就不执行
 	//log.Fatalln("get panic") // 直接退出
 }
 

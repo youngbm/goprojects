@@ -18,10 +18,12 @@ func main() {
 	var ch = make(chan int, 1)
 	ch <- 1
 	select {
-	case ch <- 100:
+	case ch <- 100: // 满了阻塞不会写入 ？？？
 		fmt.Println("100")
 	case v1 := <-ch:
 		fmt.Println(v1)
+	default:
+		fmt.Println("No IO")
 	}
 
 	var i = 2
@@ -51,7 +53,7 @@ func main() {
 
 	// Next
 	//s := new(Show) // 返回指针，并没有创建空间
-	s := Show{} // 返回指针，并没有创建空间
+	s := Show{}
 	fmt.Println(s.Param)
 	//s.Param["day"] = 2 // 没分派空间报错异常, 指针不支持索引
 }

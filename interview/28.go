@@ -14,13 +14,13 @@ func bar() {
 }
 
 func main() {
-	// 不能对比
+
 	fmt.Println([...]int{1} == [1]int{1}) //true 数据类型同,  能比较
 	fmt.Println([2]int{1} == [2]int{1})   //true 数据类型同,  能比较
 	// [...]int{1}  等于 [1]int{1}
 
 	//fmt.Println([...]int{1} == [2]int{1}) // 数据类型都不同,  不能比较
-	//fmt.Println([]int{1} == []int{1})     // 不可以比较的类型, 只能和nil比较
+	//fmt.Println([]int{1} == []int{1})     // []不可以比较的类型, 只能和nil比较, [1]int可以比较
 
 	// Next
 

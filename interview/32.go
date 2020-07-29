@@ -16,7 +16,9 @@ func main() {
 	s2 := make([]*Foo, len(s1))
 
 	for k, v := range s1 {
-		s2[k] = &v //  v 变量地址不变，只是改变值
+		tt := v
+		//s2[k] = &v //  v 变量地址不变，只是改变值
+		s2[k] = &tt //  创建中间变量
 	}
 
 	fmt.Println(s1[0], s1[0], s1[2])
@@ -31,7 +33,7 @@ func main() {
 
 	counter := 0
 	for k, v := range m { // m不是副本, 注意k,v作用域
-		if counter == 0 {
+		if counter == 0 { // 一开始0未必是A
 			delete(m, "A")
 		}
 		counter++

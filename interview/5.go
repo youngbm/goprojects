@@ -6,7 +6,7 @@ import (
 
 type abc struct {
 	test int
-	//arr  []int  // 不可以比较的类型: map, slice 和 function, 包含都不行
+	//arr  []int  // 不可以比较的类型: map, slice 和 function, 包含都不行,只能和nil比较
 	//myfunc func() int
 }
 

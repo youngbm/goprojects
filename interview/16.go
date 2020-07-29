@@ -4,8 +4,8 @@ import "fmt"
 
 func main() {
 	s := []int{1, 2, 3}
-	s1 := s[:0:1]                 // 1 limit the capacity
-	fmt.Println(len(s1), cap(s1)) // 0 1
+	s1 := s[:0:2]                     // 1 limit the capacity
+	fmt.Println(s1, len(s1), cap(s1)) // 0 1
 
 	// Next
 	m := make(map[string]int)
